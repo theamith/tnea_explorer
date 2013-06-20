@@ -38,6 +38,7 @@
 				}
 			});	
 			$("#search,#second_search").click(function() {
+				$("#loader").removeClass("hide")
 				var mymark_id;
 				var mycommunity_id;
 				if(this.id == "search"){
@@ -79,6 +80,7 @@
 					}, "json"
 				);
 				//$('#clg_middle_content').fadeOut(600);
+				$("#loader").addClass("hide")
 				$('#clg_middle_content').fadeIn(900);
 			});
 			
@@ -124,6 +126,7 @@
 				<input type="button" value="Dot it" class="btn btn-primary " style="margin-bottom: 13px;"id="second_search" />
 				<div id="dynamic_content"></div>
 			</div>
+			<img src="assets/images/spinner.gif" class="hide offset5" width="50px" height="20px" id="loader">
 			<hr />
 			<footer  class="footer">
 				<div id="footer" class="container">
